@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandon Ofertas Exclusivas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        .logo span {
+            display: inline-block;
+            margin-left: 8px;
+        }
+        .product-image {
+            max-width: 50%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .product-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+        .price {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #d4af37;
+        }
+        .price del {
+            color: #999;
+            margin-right: 10px;
+        }
+        .description {
+            font-size: 14px;
+            color: #666;
+            margin: 10px 0 20px;
+        }
+        .product-details {
+            font-size: 14px;
+            color: #555;
+            text-align: left;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+        .cta-button {
+            background-color: #d4af37;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #b8912f;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+        }
+        .footer a {
+            color: #999;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .frete-section {
+            margin: 20px 0;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .frete-section input {
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            max-width: 200px;
+            text-align: center;
+        }
+        .frete-section button {
+            background-color: #d4af37;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .frete-section button:hover {
+            background-color: #b8912f;
+        }
+        .frete-section p {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Chandon<span>🍷</span></div>
+        <img src="chandon3.png" alt="Chandon Bottle" class="product-image">
+        <div class="product-title">Champagne Perrier-Jouët Grand Brut 750ml</div>
+        <div class="price">
+            <del>R$ 449,00</del>
+            <span>R$ 0,00</span>
+        </div>
+        <div class="description">Um espumante refinado para momentos especiais, perfeito para celebrar ocasiões únicas.</div>
+        <div class="frete-section">
+            <label for="cep">Calcular Frete:</label>
+            <input type="text" id="cep" placeholder="Digite o CEP">
+            <button id="calcular-frete">Calcular</button>
+            <p id="frete-valor"></p>
+        </div>
+        <button class="cta-button" id="pagar-button">Ir para Pagamento</button>
+        <div class="footer">
+            <a href="#">Termos de Uso</a>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Contato</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('calcular-frete').addEventListener('click', function() {
+            const cep = document.getElementById('cep').value;
+            if (cep) {
+                document.getElementById('frete-valor').innerText = `Frete: R$ 29,99`;
+            } else {
+                document.getElementById('frete-valor').innerText = `Por favor, insira um CEP válido.`;
+            }
+        });
+
+        document.getElementById('pagar-button').addEventListener('click', function() {
+            alert('Redirecionando para o pagamento...');
+        });
+    </script>
+</body>
+</html>
